@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 20px 30px;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+/* 헤더부분 */
+.wrapper__header {
+  width: 100%;
+}
+
+.header__title {
+  /* background-color: red; */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+.title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 17px;
+
+  color: #55b2d4;
+}
+.subTitle {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 8px;
+  /* identical to box height */
+  letter-spacing: -0.08em;
+  padding-left: 5px;
+}
+
+.divideLine {
+  width: 100%;
+  border-top: 1px solid gray;
+  margin: 5px 0px;
+}
+.albumWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.album-thumbnail {
+  width: 120px;
+  height: 120px;
+}
+.album-songtitle {
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 15px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #0f465e;
+}
+.album-artist {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 13px;
+  text-align: center;
+
+  color: #999999;
+}
+
+/* 바디부분 */
+.wrapper__body {
+  width: 100%;
+  /* background-color: green; */
+}
+
+.albumTable {
+  width: 100%;
+  padding-top: 8px;
+}
+.albumTable th {
+  height: 20px;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 13px;
+
+  color: gray;
+  background-color: rgba(128, 128, 128, 0.281);
+  border-top: 1px solid gray;
+  border-bottom: 1px dashed gray;
+}
+.albumTable td {
+  height: 20px;
+  font-size: 10px;
+  color: #0f465e;
+  border-bottom: 1px dashed gray;
+}
+.album-table-checkbox {
+  width: 5%;
+  /* background-color: burlywood; */
+  text-align: center;
+}
+.album-table-number {
+  width: 10%;
+  text-align: center;
+  /* background-color: hotpink; */
+}
+.album-table-song {
+  width: 45%;
+  text-align: center;
+  /* background-color: greenyellow; */
+}
+.album-table-artist {
+  width: 30%;
+  text-align: center;
+  /* background-color: green; */
+}

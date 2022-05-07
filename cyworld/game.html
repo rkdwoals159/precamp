@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>game</title>
+    <link rel="stylesheet" href="./styles/game.css" />
+    <script>
+      const startWord = () =>{
+        const word = document.getElementById('word').innerText
+        const input__word = document.getElementById('input__word').value
+        if (word[word.length-1] === input__word[0]) {
+          document.getElementById('result').innerText = '정답입니다!'
+          document.getElementById('word').innerText = input__word
+          document.getElementById('input__word') = ""
+        }
+        else{
+          document.getElementById('result').innerText = '땡!'
+          document.getElementById('input__word') = ""
+        }
+        
+      }
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="wrapper__header">
+        <div class="header__title">
+          <div class="title">GAME</div>
+          <div class="subtitle">TODAY CHOICE</div>
+        </div>
+        <div class="divideLine"></div>
+      </div>
+      <div class="game__container">
+        <img src="./images/word.png" />
+        <div class="game__title">끝말잇기</div>
+        <div class="game__subtitle">제시어 : <span id="word">코드캠프</span></div>
+        <div class="word__text">
+          <input id="input__word" type="text" placeholder="단어를 입력하세요." />
+          <button class="button__search" onclick="startWord()" >검색</button>
+        </div>
+        <div id="result" class="word__result">결과!</div>
+      </div>
+      <div class="game__container">
+        <img src="./images/lotto.png" />
+        <div class="game__title">LOTTO</div>
+        <div class="game__subtitle">버튼을 누르세요.</div>
+        <div class="lotto">
+          <div class="lotto__num">3</div>
+          <div class="lotto__num">5</div>
+          <div class="lotto__num">10</div>
+          <div class="lotto__num">24</div>
+          <div class="lotto__num">30</div>
+          <div class="lotto__num">34</div>
+        </div>
+        <button id="button__" class="button__search">Button</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

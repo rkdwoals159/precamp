@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>회원가입</title>
+    <link rel="stylesheet" href="final.css" />
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "rws3yjn",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.classprofile__subject =
+              h.classprofile__subject.replace(/\bwf-loading\b/g, "") +
+              " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagprofile__subject("script")[0],
+          a;
+        h.classprofile__subject += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./final.js"></script>
+  </head>
+  <body>
+    <div class="background">
+      <div class="wrapper">
+        <div class="title">
+          <div>코드캠프 회원가입</div>
+        </div>
+        <div class="profile__input">
+          <input
+            oninput="is_valid"
+            id="emailemail"
+            class="input_text"
+            type="text"
+            placeholder="이메일을 입력해 주세요."
+          />
+          <input
+            oninput="is_valid"
+            id="namename"
+            class="input_text"
+            type="text"
+            placeholder="이름을 입력해 주세요."
+          />
+          <input
+            oninput="is_valid"
+            id="pw11"
+            class="input_text"
+            type="password"
+            placeholder="비밀번호를 입력해 주세요."
+          />
+          <input
+            oninput="is_valid"
+            id="pw22"
+            class="input_text"
+            type="password"
+            placeholder="비밀번호를 다시 입력해 주세요."
+          />
+        </div>
+        <div class="phone">
+          <input
+            id="phone1"
+            type="text"
+            oninput="changeFocus1()"
+            maxlength="3"
+          />
+          -
+          <input
+            id="phone2"
+            type="text"
+            oninput="changeFocus2()"
+            maxlength="4"
+          />
+          -
+          <input onchange="is_valid()" id="phone3" type="text" maxlength="4" />
+        </div>
+
+        <div class="auth">
+          <div id="auth_number">000000</div>
+          <button id="send_number" onclick="set__timer()" disabled="false">
+            인증번호 전송
+          </button>
+        </div>
+        <div class="auth">
+          <div id="minute">3:00</div>
+          <button id="complete_auth" disabled="true">인증 확인</button>
+        </div>
+
+        <select name="location" id="location">
+          <option selected disabled>지역을 선택하세요.</option>
+          <option>서울</option>
+          <option>인천</option>
+          <option>경기</option>
+        </select>
+
+        <div class="gender">
+          <div class="female"><input type="radio" name="gender" />여성</div>
+          <div class="male"><input type="radio" name="gender" />남성</div>
+        </div>
+
+        <hr />
+        <button id="submit" disabled>가입하기</button>
+        <!-- <button>테스트테스트</button> -->
+      </div>
+    </div>
+  </body>
+</html>

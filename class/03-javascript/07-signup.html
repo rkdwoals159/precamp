@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>signup</title>
+    <script src="./07-signup.js"></script>
+  </head>
+  <body>
+    <input
+      type="text"
+      placeholder="이메일"
+      id="email"
+      oninput="checkValidation()"
+    />
+    <input
+      type="password"
+      placeholder="비밀번호"
+      id="password1"
+      oninput="checkValidation()"
+    />
+    <input
+      type="password"
+      placeholder="비밀번호확인"
+      id="password2"
+      oninput="checkValidation()"
+    />
+    <button id="submit" disabled="true">submit</button>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>회원가입</title>
+    <link rel="stylesheet" href="./02-signup.css" />
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "rws3yjn",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.classprofile__subject =
+              h.classprofile__subject.replace(/\bwf-loading\b/g, "") +
+              " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagprofile__subject("script")[0],
+          a;
+        h.classprofile__subject += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="background">
+      <div class="wrapper">
+        <div class="title">
+          <div>회원가입을 위해 <br />정보를 입력해주세요</div>
+        </div>
+        <div class="profile">
+          <div class="profile__subject">* 이메일</div>
+          <input type="text" class="profile__input" />
+        </div>
+        <div class="profile">
+          <div class="profile__subject">* 이름</div>
+          <input type="text" class="profile__input" />
+        </div>
+        <div class="profile">
+          <div class="profile__subject">* 비밀번호</div>
+          <input type="password" class="profile__input" />
+        </div>
+        <div class="profile">
+          <div class="profile__subject">* 비밀번호 확인</div>
+          <input type="password" class="profile__input" />
+        </div>
+        <div class="gender">
+          <div class="female"><input type="radio" name="gender" />여성</div>
+          <div class="male"><input type="radio" name="gender" />남성</div>
+        </div>
+
+        <div class="checkbox">
+          <input type="checkbox" />
+          <div class="service__term">
+            이용약관 개인정보 수집 및 이용, 마케팅 활용 선택에 모두 동의합니다.
+          </div>
+        </div>
+
+        <hr />
+        <button id="submit">가입하기</button>
+        <!-- <button>테스트테스트</button> -->
+      </div>
+    </div>
+  </body>
+</html>
